@@ -1,25 +1,37 @@
+list = (input) ->
+	for i,v in pairs input.items
+			print i,v
 
 
 class Category
-	new: (@name) =>
+	new: (@name, @number) =>
+
 		@items = {}
 
 	add: (item) =>
   		table.insert @items, item
-  		print "-- added "..item
+		
 	
+current_number = 0
 
 plants = Category "plants"
 animals = Category "animals"
 minerals = Category "minerals"
-people = Category "people"
+people = Category "people"	
 
+people\add "Dante"
+people\add "Larry"
+people\add "Fatima"
+people\add "Bethany"
 
-print birds.name 
-print fish.name 
+list people
 
-for i,v in pairs birds.items
-	print i,v
+i = 0
 
-for i,v in pairs fish.items
-	print i,v
+print i
+
+f = loadstring "i += 1"
+
+f!
+
+print i
